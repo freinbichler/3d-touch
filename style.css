@@ -1,0 +1,28 @@
+body {
+  background: #3D434F;
+  color: #EEE;
+  font-family: -apple-system, 'Helvetica Neue', Arial;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#forceMe {
+  width: 40vw;
+  height: 40vw;
+  background: #EEE;
+  border-radius: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transition: -webkit-transform .3s;
+}
+
+#message {
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
