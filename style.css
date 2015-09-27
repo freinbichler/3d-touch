@@ -28,7 +28,7 @@ h1 {
   background-image: url(bg.jpg);
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: cover;
+  background-size: 100% auto;
   transition: -webkit-filter .1s;
   z-index: -1;
 }
@@ -39,7 +39,7 @@ h1 {
   background: rgba(255,255,255,0.7);
   border-radius: 100%;
   position: absolute;
-  top: 73%;
+  top: 408px;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transition: width .1s, height .1s;
