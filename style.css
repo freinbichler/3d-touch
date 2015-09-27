@@ -1,26 +1,51 @@
 body {
-  background: #3D434F;
-  color: #EEE;
+  background: orange;
+  color: #FFF;
   font-family: -apple-system, 'Helvetica Neue', Arial;
   padding: 0;
   margin: 0;
   overflow: hidden;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  transition: -webkit-filter .1s;
+  z-index: -1;
 }
 
 #forceMe {
-  width: 40vw;
-  height: 40vw;
-  background: #EEE;
+  width: 23vw;
+  height: 23vw;
+  background: rgba(255,255,255,0.7);
   border-radius: 100%;
   position: absolute;
-  top: 40%;
+  top: 73%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transition: -webkit-transform .3s;
+  transition: width .1s, height .1s;
 }
 
-#message {
-  text-align: center;
+#footer {
   position: fixed;
   bottom: 10px;
   left: 0;

@@ -1,5 +1,4 @@
 var element = document.getElementById('forceMe');
-var message = document.getElementById('message');
 var touch = null;
 
 addForceTouchToElement(element);
@@ -33,12 +32,12 @@ function refreshForceValue() {
   }else{
     forceValue = 0;
   }
-  message.innerHTML = 'Force: ' + forceValue;
-  setCircleScale(forceValue);
+  renderElement(forceValue);
 }
 
-function setCircleScale(forceValue) {
-    element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue) + ')';
+function renderElement(forceValue) {
+  element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 1.5) + ')';
+  document.getElementById('background').style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
 }
 
 function addForceTouchToElement(elem) {
