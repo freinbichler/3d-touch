@@ -48,6 +48,15 @@ h1 {
 #footer {
   position: fixed;
   bottom: 10px;
-  left: 0;
+  right: 10px;
   width: 100%;
+  text-align: right;
+}
+
+#forceValue {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 100%;
+  text-align: left;
 }

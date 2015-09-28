@@ -1,4 +1,6 @@
 var element = document.getElementById('forceMe');
+var forceValueOutput = document.getElementById('forceValue');
+var background = document.getElementById('background');
 var touch = null;
 
 addForceTouchToElement(element);
@@ -32,12 +34,14 @@ function refreshForceValue() {
   }else{
     forceValue = 0;
   }
+
   renderElement(forceValue);
 }
 
 function renderElement(forceValue) {
   element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 1.5) + ')';
-  document.getElementById('background').style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
+  background.style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
+  forceValueOutput.innerHTML = 'Force: ' + forceValue;
 }
 
 function addForceTouchToElement(elem) {
