@@ -29,7 +29,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100% auto;
-  transition: -webkit-filter .1s;
+  transition: -webkit-filter .5s;
   z-index: -1;
 }
 
@@ -42,7 +42,7 @@ h1 {
   top: 408px;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transition: width .1s, height .1s;
+  transition: -webkit-transform .1s;
 }
 
 #footer {
