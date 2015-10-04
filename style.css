@@ -22,8 +22,11 @@ h1 {
 #background {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100vw;
+  max-width: 414px;
+  min-width: 375px;
   height: 100vh;
   background-image: url(bg.jpg);
   background-repeat: no-repeat;
@@ -34,8 +37,8 @@ h1 {
 }
 
 #forceMe {
-  width: 23vw;
-  height: 23vw;
+  width: 93px;
+  height: 93px;
   background: rgba(255,255,255,0.7);
   border-radius: 100%;
   position: absolute;
@@ -43,6 +46,12 @@ h1 {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transition: -webkit-transform .1s;
+}
+
+@media (min-width: 414px) {
+  #forceMe {
+    top: 450px;
+  }
 }
 
 #footer {
