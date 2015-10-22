@@ -25,6 +25,11 @@ function checkForce(e) {
   setTimeout(refreshForceValue.bind(touch), 10);
 }
 
+function checkMacForce(e) {
+  // max value for trackpad is 3.0 compare to 1.0 on iOS
+  renderElement(e.webkitForce/3);
+}
+
 function refreshForceValue() {
   var touchEvent = this;
   var forceValue = 0;
@@ -48,4 +53,6 @@ function addForceTouchToElement(elem) {
   elem.addEventListener('touchstart', onTouchStart, false);
   elem.addEventListener('touchmove', onTouchMove, false);
   elem.addEventListener('touchend', onTouchEnd, false);
+  elem.addEventListener('webkitmouseforcewillbegin', checkMacForce, false);
+  elem.addEventListener('webkitmouseforcechanged', checkMacForce, false);
 }
