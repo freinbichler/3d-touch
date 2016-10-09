@@ -19,7 +19,7 @@ function onTouchEnd(e) {
   touch = null;
 }
 
-// use timeout-based method only on devices lower than iOS 10
+// use timeout-based method only on devices not supporting ontouchforcechange
 function checkForce(e) {
   if('ontouchforcechange' in document === false) {
     touch = e.touches[0];
