@@ -21,7 +21,7 @@ function onTouchEnd(e) {
 
 // use timeout-based method only on devices lower than iOS 10
 function checkForce(e) {
-  if(getiOSVersion() < 10) {
+  if('ontouchforcechange' in document === false) {
     touch = e.touches[0];
     setTimeout(refreshForceValue.bind(touch), 10);
   }
@@ -67,16 +67,6 @@ function addForceTouchToElement(elem) {
   elem.addEventListener('touchend', onTouchEnd, false);
   elem.addEventListener('webkitmouseforcechanged', onClickForceChange, false);
   elem.addEventListener('touchforcechange', onTouchForceChange, false);
-}
-
-// get iOS version number
-function getiOSVersion() {
-  if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
-    var iOSVersion = parseFloat(String(window.navigator.userAgent.match(/[0-9]*_[0-9]/)).split('_')[0]+'.'+String(window.navigator.userAgent.match(/[0-9]_[0-9]/)).split('_')[1]);
-    return iOSVersion;
-  }
-
-  return false;
 }
 
 addForceTouchToElement(element);
